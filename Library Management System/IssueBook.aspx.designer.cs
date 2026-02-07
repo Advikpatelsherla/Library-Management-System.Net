@@ -15,22 +15,22 @@ namespace Library_Management_System
     {
 
         /// <summary>
-        /// ddlStudent control.
+        /// cmbStudent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlStudent;
+        protected global::AjaxControlToolkit.ComboBox cmbStudent;
 
         /// <summary>
-        /// ddlBook control.
+        /// cmbBook control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlBook;
+        protected global::AjaxControlToolkit.ComboBox cmbBook;
 
         /// <summary>
         /// btnIssue control.

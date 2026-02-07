@@ -134,11 +134,26 @@ textarea {
         transform: translateY(-8px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     }
+/* ===== GRAND DASHBOARD HEADING ===== */
 
+.dashboard-heading {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 35px;
+    color: #0d6efd;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', 'Poppins', Arial, sans-serif;
+}
 
+.dashboard-heading {
+    background: linear-gradient(90deg, #0d6efd, #6610f2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
 /* ===== TOP RIGHT LOGOUT ICON ===== */
-
 .logout-icon {
     position: fixed;
     top: 20px;
@@ -292,3 +307,44 @@ textarea {
     .styled-grid a {
         margin-right: 8px;
     }
+
+/* ================== GRID SCROLL (FINAL FIX) ================== */
+
+.grid-scroll {
+    max-height: 260px; /* shows ~5 rows */
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+}
+
+    /* Force GridView table to respect scroll */
+    .grid-scroll table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    /* Sticky header */
+    /* Sticky + Blue header */
+    .grid-scroll .styled-grid th {
+        position: sticky;
+        top: 0;
+        background: #0d6efd; /* BLUE */
+        color: white;
+        z-index: 2;
+    }
+
+
+    /* Optional scrollbar styling */
+    .grid-scroll::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .grid-scroll::-webkit-scrollbar-thumb {
+        background: #adb5bd;
+        border-radius: 4px;
+    }
+
+        .grid-scroll::-webkit-scrollbar-thumb:hover {
+            background: #6c757d;
+        }

@@ -23,37 +23,36 @@
                     CssClass="primary-btn"
                     OnClick="btnSearch_Click" />
 
-                <asp:Button ID="btnAll" runat="server"
-                    Text="View All"
-                    CssClass="secondary-btn"
-                    OnClick="btnAll_Click" />
 
             </div>
 
             <!-- GRID VIEW -->
             <div class="table-wrapper">
+    <div class="grid-scroll">
 
-                <asp:GridView ID="gvStudents" runat="server"
-                    CssClass="styled-grid"
-                    AutoGenerateColumns="False"
-                    DataKeyNames="StudentId"
-                    OnRowEditing="gvStudents_RowEditing"
-                    OnRowUpdating="gvStudents_RowUpdating"
-                    OnRowCancelingEdit="gvStudents_RowCancelingEdit"
-                    OnRowDeleting="gvStudents_RowDeleting">
+        <asp:GridView ID="gvStudents" runat="server"
+            CssClass="styled-grid"
+            AutoGenerateColumns="False"
+            DataKeyNames="StudentId"
+            OnRowEditing="gvStudents_RowEditing"
+            OnRowUpdating="gvStudents_RowUpdating"
+            OnRowCancelingEdit="gvStudents_RowCancelingEdit"
+            OnRowDeleting="gvStudents_RowDeleting">
 
-                    <Columns>
-                        <asp:BoundField DataField="StudentId" HeaderText="ID" ReadOnly="True" />
-                        <asp:BoundField DataField="StudentName" HeaderText="Name" />
-                        <asp:BoundField DataField="Department" HeaderText="Department" />
-                        <asp:BoundField DataField="Email" HeaderText="Email" />
-                        <asp:BoundField DataField="Mobile" HeaderText="Mobile" />
-                        <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
-                    </Columns>
+            <Columns>
+                <asp:BoundField DataField="StudentId" HeaderText="ID" ReadOnly="True" />
+                <asp:BoundField DataField="StudentName" HeaderText="Name" />
+                <asp:BoundField DataField="Department" HeaderText="Department" />
+                <asp:BoundField DataField="Email" HeaderText="Email" />
+                <asp:BoundField DataField="Mobile" HeaderText="Mobile" />
+                <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+            </Columns>
 
-                </asp:GridView>
+        </asp:GridView>
 
-            </div>
+    </div>
+</div>
+
 
             <!-- ACTIONS -->
             <div class="form-actions">

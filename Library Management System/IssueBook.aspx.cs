@@ -40,10 +40,11 @@ namespace Library_Management_System
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                ddlStudent.DataSource = dt;
-                ddlStudent.DataTextField = "StudentName";
-                ddlStudent.DataValueField = "StudentId";
-                ddlStudent.DataBind();
+                cmbStudent.DataSource = dt;
+                cmbStudent.DataTextField = "StudentName";
+                cmbStudent.DataValueField = "StudentId";
+                cmbStudent.DataBind();
+
             }
         }
 
@@ -63,10 +64,11 @@ namespace Library_Management_System
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                ddlBook.DataSource = dt;
-                ddlBook.DataTextField = "BookName";
-                ddlBook.DataValueField = "BookId";
-                ddlBook.DataBind();
+                cmbBook.DataSource = dt;
+                cmbBook.DataTextField = "BookName";
+                cmbBook.DataValueField = "BookId";
+                cmbBook.DataBind();
+
             }
         }
 
@@ -76,8 +78,9 @@ namespace Library_Management_System
 
         protected void btnIssue_Click(object sender, EventArgs e)
         {
-            int studentId = int.Parse(ddlStudent.SelectedValue);
-            int bookId = int.Parse(ddlBook.SelectedValue);
+            int studentId = int.Parse(cmbStudent.SelectedValue);
+            int bookId = int.Parse(cmbBook.SelectedValue);
+
 
             string cs = ConfigurationManager
                         .ConnectionStrings["LibraryDBConnection"]

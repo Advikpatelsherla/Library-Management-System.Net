@@ -1,4 +1,8 @@
-﻿<%@ Page Language="C#"
+﻿<%@ Register Assembly="AjaxControlToolkit"
+    Namespace="AjaxControlToolkit"
+    TagPrefix="ajaxToolkit" %>
+
+<%@ Page Language="C#"
     AutoEventWireup="true"
     MasterPageFile="~/Site.Master"
     CodeBehind="IssueBook.aspx.cs"
@@ -11,20 +15,35 @@
 
             <h2 class="form-title">Issue Book</h2>
 
+            <!-- STUDENT SEARCHABLE DROPDOWN -->
             <div class="form-group">
                 <label>Select Student</label>
-                <asp:DropDownList ID="ddlStudent" runat="server"
-                    CssClass="form-input">
-                </asp:DropDownList>
+
+                <ajaxToolkit:ComboBox
+                    ID="cmbStudent"
+                    runat="server"
+                    CssClass="form-input"
+                    AutoCompleteMode="SuggestAppend"
+                    DropDownStyle="DropDown"
+                    CaseSensitive="false">
+                </ajaxToolkit:ComboBox>
             </div>
 
+            <!-- BOOK SEARCHABLE DROPDOWN -->
             <div class="form-group">
                 <label>Select Book</label>
-                <asp:DropDownList ID="ddlBook" runat="server"
-                    CssClass="form-input">
-                </asp:DropDownList>
+
+                <ajaxToolkit:ComboBox
+                    ID="cmbBook"
+                    runat="server"
+                    CssClass="form-input"
+                    AutoCompleteMode="SuggestAppend"
+                    DropDownStyle="DropDown"
+                    CaseSensitive="false">
+                </ajaxToolkit:ComboBox>
             </div>
 
+            <!-- ACTION BUTTONS -->
             <div class="form-actions">
                 <asp:Button ID="btnIssue" runat="server"
                     Text="Issue Book"
@@ -36,8 +55,10 @@
                 </a>
             </div>
 
+            <!-- MESSAGE -->
             <asp:Label ID="lblMsg" runat="server"
-                CssClass="success-msg"></asp:Label>
+                CssClass="success-msg">
+            </asp:Label>
 
         </div>
     </div>

@@ -29,38 +29,38 @@
                     CssClass="primary-btn"
                     OnClick="btnSearch_Click" />
 
-                <asp:Button ID="btnAll" runat="server"
-                    Text="View All"
-                    CssClass="secondary-btn"
-                    OnClick="btnAll_Click" />
-
             </div>
 
             <!-- GRID VIEW -->
             <div class="table-wrapper">
+    <div class="grid-scroll">
 
-                <asp:GridView ID="gvBooks" runat="server"
-                    CssClass="styled-grid"
-                    AutoGenerateColumns="False"
-                    DataKeyNames="BookId"
-                    OnRowEditing="gvBooks_RowEditing"
-                    OnRowUpdating="gvBooks_RowUpdating"
-                    OnRowCancelingEdit="gvBooks_RowCancelingEdit"
-                    OnRowDeleting="gvBooks_RowDeleting">
+        <asp:GridView ID="gvBooks" runat="server"
+            CssClass="styled-grid"
+            AutoGenerateColumns="False"
+            DataKeyNames="BookId"
+            OnRowEditing="gvBooks_RowEditing"
+            OnRowUpdating="gvBooks_RowUpdating"
+            OnRowCancelingEdit="gvBooks_RowCancelingEdit"
+            OnRowDeleting="gvBooks_RowDeleting">
 
-                    <Columns>
-                        <asp:BoundField DataField="BookId" HeaderText="ID" ReadOnly="True" />
-                        <asp:BoundField DataField="BookName" HeaderText="Book Name" />
-                        <asp:BoundField DataField="Author" HeaderText="Author" />
-                        <asp:BoundField DataField="Publication" HeaderText="Publication" />
-                        <asp:BoundField DataField="TotalCopies" HeaderText="Total Copies" />
-                        <asp:BoundField DataField="AvailableCopies" HeaderText="Available Copies" />
-                        <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
-                    </Columns>
+            <Columns>
+                <asp:BoundField DataField="BookId" HeaderText="ID" ReadOnly="True" />
+                <asp:BoundField DataField="BookName" HeaderText="Book Name" />
+                <asp:BoundField DataField="Author" HeaderText="Author" />
+                <asp:BoundField DataField="Publication" HeaderText="Publication" />
+                <asp:BoundField DataField="TotalCopies" HeaderText="Total Copies" />
+                <asp:BoundField DataField="AvailableCopies" HeaderText="Available Copies" />
+                <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+            </Columns>
 
-                </asp:GridView>
+        </asp:GridView>
 
-            </div>
+    </div>
+</div>
+
+
+
 
             <!-- ACTIONS -->
             <div class="form-actions">

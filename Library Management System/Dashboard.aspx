@@ -7,7 +7,9 @@
 
     <div class="dashboard-container">
 
-        <h2 class="dashboard-title">Library Management System</h2>
+       <h1 class="dashboard-heading">
+            Library Management System
+        </h1>
         <hr />
 <div class="dashboard-grid">
 
