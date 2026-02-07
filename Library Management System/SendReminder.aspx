@@ -1,60 +1,81 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SendReminder.aspx.cs" Inherits="Library_Management_System.SendReminder" %>
+﻿<%@ Page Language="C#"
+    AutoEventWireup="true"
+    MasterPageFile="~/Site.Master"
+    CodeBehind="SendReminder.aspx.cs"
+    Inherits="Library_Management_System.SendReminder" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-       <h2>Send Email Reminder</h2>
+    <div class="page-wrapper">
+        <div class="form-card wide-card">
 
-Search Student:
-<asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
-<asp:Button ID="btnSearch" runat="server"
-    Text="Search"
-    OnClick="btnSearch_Click" />
-<asp:Button ID="btnAll" runat="server"
-    Text="View All"
-    OnClick="btnAll_Click" />
+            <h2 class="form-title">Send Email Reminder</h2>
 
-<br /><br />
+            <!-- SEARCH SECTION -->
+            <div class="search-section">
 
-<asp:GridView ID="gvIssuedAll" runat="server"
-    AutoGenerateColumns="False"
-    DataKeyNames="Email">
+                <asp:TextBox ID="txtSearch" runat="server"
+                    CssClass="form-input"
+                    placeholder="Search student"></asp:TextBox>
 
-    <Columns>
-        <asp:TemplateField>
-            <HeaderTemplate>Select</HeaderTemplate>
-            <ItemTemplate>
-                <asp:CheckBox ID="chkSelect" runat="server" />
-            </ItemTemplate>
-        </asp:TemplateField>
+                <asp:Button ID="btnSearch" runat="server"
+                    Text="Search"
+                    CssClass="primary-btn"
+                    OnClick="btnSearch_Click" />
 
-        <asp:BoundField DataField="StudentName" HeaderText="Student" />
-        <asp:BoundField DataField="Email" HeaderText="Email" />
-        <asp:BoundField DataField="BookName" HeaderText="Book" />
-        <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" />
-        <asp:BoundField DataField="DueDate" HeaderText="Due Date" />
-        <asp:BoundField DataField="Status" HeaderText="Status" />
-    </Columns>
-</asp:GridView>
+                <asp:Button ID="btnAll" runat="server"
+                    Text="View All"
+                    CssClass="secondary-btn"
+                    OnClick="btnAll_Click" />
 
-<br />
+            </div>
 
-<asp:Button ID="btnSend" runat="server"
-    Text="Send Reminder to Selected"
-    OnClick="btnSend_Click" />
+            <!-- GRID VIEW -->
+            <div class="table-wrapper">
 
-<br /><br />
-<asp:Label ID="lblMsg" runat="server"></asp:Label>
+                <asp:GridView ID="gvIssuedAll" runat="server"
+                    CssClass="styled-grid"
+                    AutoGenerateColumns="False"
+                    DataKeyNames="Email">
 
-<br /><br />
-<a href="Dashboard.aspx">Back to Dashboard</a>
+                    <Columns>
 
+                        <asp:TemplateField>
+                            <HeaderTemplate>Select</HeaderTemplate>
+                            <ItemTemplate>
+                                <asp:CheckBox ID="chkSelect" runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
 
-    </form>
-</body>
-</html>
+                        <asp:BoundField DataField="StudentName" HeaderText="Student" />
+                        <asp:BoundField DataField="Email" HeaderText="Email" />
+                        <asp:BoundField DataField="BookName" HeaderText="Book" />
+                        <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" />
+                        <asp:BoundField DataField="DueDate" HeaderText="Due Date" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+
+                    </Columns>
+
+                </asp:GridView>
+
+            </div>
+
+            <!-- ACTION BUTTONS -->
+            <div class="form-actions">
+                <asp:Button ID="btnSend" runat="server"
+                    Text="Send Reminder to Selected"
+                    CssClass="primary-btn"
+                    OnClick="btnSend_Click" />
+
+                <a href="Dashboard.aspx" class="secondary-btn">
+                    Go Back
+                </a>
+            </div>
+
+            <asp:Label ID="lblMsg" runat="server"
+                CssClass="success-msg"></asp:Label>
+
+        </div>
+    </div>
+
+</asp:Content>

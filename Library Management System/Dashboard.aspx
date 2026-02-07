@@ -1,30 +1,81 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="Library_Management_System.Dashboard" %>
+﻿<%@ Page Language="C#"
+    AutoEventWireup="true"
+    MasterPageFile="~/Site.Master"
+    CodeBehind="Dashboard.aspx.cs"
+    Inherits="Library_Management_System.Dashboard" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<!DOCTYPE html>
+    <div class="dashboard-container">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-       <h2>Library Management System</h2>
-<hr />
+        <h2 class="dashboard-title">Library Management System</h2>
+        <hr />
+<div class="dashboard-grid">
 
-<ul>
-    <li><a href="AddBook.aspx">Manage Books</a></li>
-    <li><a href="ViewBooks.aspx">View Books</a></li>
-    <li><a href="AddStudent.aspx">Manage Students</a></li>
-    <li><a href="ViewStudents.aspx">View Students</a></li>
-    <li><a href="IssueBook.aspx">Issue Book</a></li>
-    <li><a href="ReturnBook.aspx">Return Book</a></li>
-    <li><a href="IssuedBooks.aspx">Issued Books</a></li>
-    <li><a href="SendReminder.aspx">Send Email Reminder</a></li>
-    <li><a href="Reports.aspx">Reports</a></li>
+    <div class="dashboard-card">
+        <a href="AddBook.aspx">
+            <i class="fa-solid fa-book"></i>
+            <h3>Add Book</h3>
+        </a>
+    </div>
+
+    <div class="dashboard-card">
+        <a href="ViewBooks.aspx">
+            <i class="fa-solid fa-book-open"></i>
+            <h3>View Books</h3>
+        </a>
+    </div>
+
+    <div class="dashboard-card">
+        <a href="AddStudent.aspx">
+            <i class="fa-solid fa-user-plus"></i>
+            <h3>Add Student</h3>
+        </a>
+    </div>
+
+    <div class="dashboard-card">
+        <a href="ViewStudents.aspx">
+            <i class="fa-solid fa-users"></i>
+            <h3>View Students</h3>
+        </a>
+    </div>
+
+    <div class="dashboard-card">
+        <a href="IssueBook.aspx">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            <h3>Issue Book</h3>
+        </a>
+    </div>
+
+    <div class="dashboard-card">
+        <a href="ReturnBook.aspx">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+            <h3>Return Book</h3>
+        </a>
+    </div>
+
+    <div class="dashboard-card">
+        <a href="IssuedBooks.aspx">
+            <i class="fa-solid fa-clipboard-list"></i>
+            <h3>Issued Books</h3>
+        </a>
+    </div>
+
+    <div class="dashboard-card">
+        <a href="SendReminder.aspx">
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Send Reminder</h3>
+        </a>
+    </div>
+
+    <div class="dashboard-card">
+        <a href="Reports.aspx">
+            <i class="fa-solid fa-chart-column"></i>
+            <h3>Reports</h3>
+        </a>
+    </div>
+
+</div>
 
 
-</ul>
+</asp:Content>
 
-    </form>
-</body>
-</html>

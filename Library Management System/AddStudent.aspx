@@ -1,51 +1,55 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddStudent.aspx.cs" Inherits="Library_Management_System.AddStudent" %>
+﻿<%@ Page Language="C#"
+    AutoEventWireup="true"
+    MasterPageFile="~/Site.Master"
+    CodeBehind="AddStudent.aspx.cs"
+    Inherits="Library_Management_System.AddStudent" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <h2>Add Student</h2>
+    <div class="page-wrapper">
+        <div class="form-card">
 
-<table>
-    <tr>
-        <td>Student Name:</td>
-        <td><asp:TextBox ID="txtStudentName" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Department:</td>
-        <td><asp:TextBox ID="txtDepartment" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Email:</td>
-        <td><asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Mobile:</td>
-        <td><asp:TextBox ID="txtMobile" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <asp:Button ID="btnSave" runat="server"
-                        Text="Save Student"
-                        OnClick="btnSave_Click" />
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <asp:Label ID="lblMsg" runat="server"></asp:Label>
-        </td>
-    </tr>
-</table>
+            <h2 class="form-title">Manage Student</h2>
 
-<br />
-<a href="Dashboard.aspx">Back to Dashboard</a>
+            <div class="form-group">
+                <label>Student Name</label>
+                <asp:TextBox ID="txtStudentName" runat="server"
+                    CssClass="form-input"></asp:TextBox>
+            </div>
 
-    </form>
-</body>
-</html>
+            <div class="form-group">
+                <label>Department</label>
+                <asp:TextBox ID="txtDepartment" runat="server"
+                    CssClass="form-input"></asp:TextBox>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <asp:TextBox ID="txtEmail" runat="server"
+                    CssClass="form-input"></asp:TextBox>
+            </div>
+
+            <div class="form-group">
+                <label>Mobile</label>
+                <asp:TextBox ID="txtMobile" runat="server"
+                    CssClass="form-input"></asp:TextBox>
+            </div>
+
+            <div class="form-actions">
+                <asp:Button ID="btnSave" runat="server"
+                    Text="Save Student"
+                    CssClass="primary-btn"
+                    OnClick="btnSave_Click" />
+
+                <a href="Dashboard.aspx" class="secondary-btn">
+                    Go Back
+                </a>
+            </div>
+
+            <asp:Label ID="lblMsg" runat="server"
+                CssClass="success-msg"></asp:Label>
+
+        </div>
+    </div>
+
+</asp:Content>

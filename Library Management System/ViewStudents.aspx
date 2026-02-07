@@ -1,48 +1,68 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewStudents.aspx.cs" Inherits="Library_Management_System.ViewStudents" %>
+﻿<%@ Page Language="C#"
+    AutoEventWireup="true"
+    MasterPageFile="~/Site.Master"
+    CodeBehind="ViewStudents.aspx.cs"
+    Inherits="Library_Management_System.ViewStudents" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <h2>Students List</h2>
+    <div class="page-wrapper">
+        <div class="form-card wide-card">
 
-Search by Name:
-<asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
-<asp:Button ID="btnSearch" runat="server"
-            Text="Search"
-            OnClick="btnSearch_Click" />
-<asp:Button ID="btnAll" runat="server"
-            Text="View All"
-            OnClick="btnAll_Click" />
+            <h2 class="form-title">Students List</h2>
 
-<br /><br />
+            <!-- SEARCH SECTION -->
+            <div class="search-section">
 
-<asp:GridView ID="gvStudents" runat="server"
-    AutoGenerateColumns="False"
-    DataKeyNames="StudentId"
-    OnRowEditing="gvStudents_RowEditing"
-    OnRowUpdating="gvStudents_RowUpdating"
-    OnRowCancelingEdit="gvStudents_RowCancelingEdit"
-    OnRowDeleting="gvStudents_RowDeleting">
+                <asp:TextBox ID="txtSearch" runat="server"
+                    CssClass="form-input"
+                    placeholder="Search by student name"></asp:TextBox>
 
-    <Columns>
-        <asp:BoundField DataField="StudentId" HeaderText="ID" ReadOnly="True" />
-        <asp:BoundField DataField="StudentName" HeaderText="Name" />
-        <asp:BoundField DataField="Department" HeaderText="Department" />
-        <asp:BoundField DataField="Email" HeaderText="Email" />
-        <asp:BoundField DataField="Mobile" HeaderText="Mobile" />
+                <asp:Button ID="btnSearch" runat="server"
+                    Text="Search"
+                    CssClass="primary-btn"
+                    OnClick="btnSearch_Click" />
 
-        <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
-    </Columns>
-</asp:GridView>
+                <asp:Button ID="btnAll" runat="server"
+                    Text="View All"
+                    CssClass="secondary-btn"
+                    OnClick="btnAll_Click" />
 
-<br />
-<a href="Dashboard.aspx">Back to Dashboard</a>
+            </div>
 
-    </form>
-</body>
-</html>
+            <!-- GRID VIEW -->
+            <div class="table-wrapper">
+
+                <asp:GridView ID="gvStudents" runat="server"
+                    CssClass="styled-grid"
+                    AutoGenerateColumns="False"
+                    DataKeyNames="StudentId"
+                    OnRowEditing="gvStudents_RowEditing"
+                    OnRowUpdating="gvStudents_RowUpdating"
+                    OnRowCancelingEdit="gvStudents_RowCancelingEdit"
+                    OnRowDeleting="gvStudents_RowDeleting">
+
+                    <Columns>
+                        <asp:BoundField DataField="StudentId" HeaderText="ID" ReadOnly="True" />
+                        <asp:BoundField DataField="StudentName" HeaderText="Name" />
+                        <asp:BoundField DataField="Department" HeaderText="Department" />
+                        <asp:BoundField DataField="Email" HeaderText="Email" />
+                        <asp:BoundField DataField="Mobile" HeaderText="Mobile" />
+                        <asp:CommandField ShowEditButton="True" ShowDeleteButton="True" />
+                    </Columns>
+
+                </asp:GridView>
+
+            </div>
+
+            <!-- ACTIONS -->
+            <div class="form-actions">
+                <a href="Dashboard.aspx" class="secondary-btn">
+                    Go Back
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</asp:Content>

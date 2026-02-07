@@ -1,45 +1,48 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Library_Management_System.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+    CodeBehind="Login.aspx.cs"
+    Inherits="Library_Management_System.Login" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Login</title>
+    <link href="Content/Site.css" rel="stylesheet" />
 </head>
+
 <body>
+
+    <!-- THIS FORM IS REQUIRED -->
     <form id="form1" runat="server">
-        <h2>Library Management System - Login</h2>
 
-<table>
-    <tr>
-        <td>Username:</td>
-        <td>
-            <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
-        </td>
-    </tr>
+        <div class="login-wrapper">
+            <div class="login-card">
 
-    <tr>
-        <td>Password:</td>
-        <td>
-            <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-        </td>
-    </tr>
+                <h2 class="login-title">Library Login</h2>
+                <p class="login-subtitle">Welcome back 👋</p>
 
-    <tr>
-        <td></td>
-        <td>
-            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                <div class="input-group">
+                    <asp:TextBox ID="txtUsername" runat="server"
+                        CssClass="login-input"
+                        placeholder="Username"></asp:TextBox>
+                </div>
 
-        </td>
-    </tr>
+                <div class="input-group">
+                    <asp:TextBox ID="txtPassword" runat="server"
+                        CssClass="login-input"
+                        TextMode="Password"
+                        placeholder="Password"></asp:TextBox>
+                </div>
 
-    <tr>
-        <td></td>
-        <td>
-            <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>
-        </td>
-    </tr>
-</table>
+                <asp:Button ID="btnLogin" runat="server"
+                    Text="Log In"
+                    CssClass="login-btn"
+                    OnClick="btnLogin_Click" />
+
+                <asp:Label ID="lblMessage" runat="server"
+                    CssClass="login-error"></asp:Label>
+
+            </div>
+        </div>
 
     </form>
 </body>

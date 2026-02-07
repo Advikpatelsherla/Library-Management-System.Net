@@ -1,32 +1,42 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="IssuedBooks.aspx.cs" Inherits="Library_Management_System.IssuedBooks" %>
+﻿<%@ Page Language="C#"
+    AutoEventWireup="true"
+    MasterPageFile="~/Site.Master"
+    CodeBehind="IssuedBooks.aspx.cs"
+    Inherits="Library_Management_System.IssuedBooks" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <h2>Issued Books (Not Returned)</h2>
+    <div class="page-wrapper">
+        <div class="form-card wide-card">
 
-<asp:GridView ID="gvIssued" runat="server"
-    AutoGenerateColumns="False"
-    BorderWidth="1"
-    CellPadding="5">
+            <h2 class="form-title">Issued Books (Not Returned)</h2>
 
-    <Columns>
-        <asp:BoundField DataField="StudentName" HeaderText="Student" />
-        <asp:BoundField DataField="BookName" HeaderText="Book" />
-        <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" />
-        <asp:BoundField DataField="DueDate" HeaderText="Due Date" />
-        <asp:BoundField DataField="Status" HeaderText="Status" />
-    </Columns>
-</asp:GridView>
+            <!-- GRID VIEW -->
+            <div class="table-wrapper">
 
-<br />
-<a href="Dashboard.aspx">Back to Dashboard</a>
+                <asp:GridView ID="gvIssued" runat="server"
+                    CssClass="styled-grid"
+                    AutoGenerateColumns="False">
 
-    </form>
-</body>
-</html>
+                    <Columns>
+                        <asp:BoundField DataField="StudentName" HeaderText="Student" />
+                        <asp:BoundField DataField="BookName" HeaderText="Book" />
+                        <asp:BoundField DataField="IssueDate" HeaderText="Issue Date" />
+                        <asp:BoundField DataField="DueDate" HeaderText="Due Date" />
+                        <asp:BoundField DataField="Status" HeaderText="Status" />
+                    </Columns>
+
+                </asp:GridView>
+
+            </div>
+
+            <div class="form-actions">
+                <a href="Dashboard.aspx" class="secondary-btn">
+                    Go Back
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</asp:Content>

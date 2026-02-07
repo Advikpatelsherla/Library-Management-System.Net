@@ -127,6 +127,7 @@
     <Content Include="IssueBook.aspx" />
     <Content Include="IssuedBooks.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="Reports.aspx" />
     <Content Include="ReturnBook.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -261,6 +262,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports.aspx.cs">

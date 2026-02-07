@@ -1,49 +1,55 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddBook.aspx.cs" Inherits="Library_Management_System.AddBook" %>
+﻿<%@ Page Language="C#"
+    AutoEventWireup="true"
+    MasterPageFile="~/Site.Master"
+    CodeBehind="AddBook.aspx.cs"
+    Inherits="Library_Management_System.AddBook" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <h2>Add Book</h2>
+    <div class="page-wrapper">
+        <div class="form-card">
 
-<table>
-    <tr>
-        <td>Book Name:</td>
-        <td><asp:TextBox ID="txtBookName" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Author:</td>
-        <td><asp:TextBox ID="txtAuthor" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Publication:</td>
-        <td><asp:TextBox ID="txtPublication" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td>Total Copies:</td>
-        <td><asp:TextBox ID="txtTotal" runat="server"></asp:TextBox></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <asp:Button ID="btnSave" runat="server" Text="Save Book" OnClick="btnSave_Click" />
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>
-            <asp:Label ID="lblMsg" runat="server" ForeColor="Green"></asp:Label>
-        </td>
-    </tr>
-</table>
+            <h2 class="form-title">Add Book</h2>
 
-<br />
-<a href="Dashboard.aspx">Back to Dashboard</a>
+            <div class="form-group">
+                <label>Book Name</label>
+                <asp:TextBox ID="txtBookName" runat="server"
+                    CssClass="form-input"></asp:TextBox>
+            </div>
 
-    </form>
-</body>
-</html>
+            <div class="form-group">
+                <label>Author</label>
+                <asp:TextBox ID="txtAuthor" runat="server"
+                    CssClass="form-input"></asp:TextBox>
+            </div>
+
+            <div class="form-group">
+                <label>Publication</label>
+                <asp:TextBox ID="txtPublication" runat="server"
+                    CssClass="form-input"></asp:TextBox>
+            </div>
+
+            <div class="form-group">
+                <label>Total Copies</label>
+                <asp:TextBox ID="txtTotal" runat="server"
+                    CssClass="form-input"></asp:TextBox>
+            </div>
+
+            <div class="form-actions">
+                <asp:Button ID="btnSave" runat="server"
+                    Text="Save Book"
+                    CssClass="primary-btn"
+                    OnClick="btnSave_Click" />
+
+                <a href="Dashboard.aspx" class="secondary-btn">
+                    Go Back
+                </a>
+            </div>
+
+            <asp:Label ID="lblMsg" runat="server"
+                CssClass="success-msg"></asp:Label>
+
+        </div>
+    </div>
+
+</asp:Content>
