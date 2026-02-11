@@ -11,35 +11,44 @@ namespace Library_Management_System
 {
 
 
-    public partial class Login
+    public partial class StudentRegister
     {
 
         /// <summary>
-        /// form1 control.
+        /// txtName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtName;
 
         /// <summary>
-        /// ddlRole control.
+        /// txtDept control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRole;
+        protected global::System.Web.UI.WebControls.TextBox txtDept;
 
         /// <summary>
-        /// txtUsername control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUsername;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
+
+        /// <summary>
+        /// txtMobile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMobile;
 
         /// <summary>
         /// txtPassword control.
@@ -51,15 +60,6 @@ namespace Library_Management_System
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
-        /// btnLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
-
-        /// <summary>
         /// btnRegister control.
         /// </summary>
         /// <remarks>
@@ -69,12 +69,12 @@ namespace Library_Management_System
         protected global::System.Web.UI.WebControls.Button btnRegister;
 
         /// <summary>
-        /// lblMessage control.
+        /// lblMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMessage;
+        protected global::System.Web.UI.WebControls.Label lblMsg;
     }
 }

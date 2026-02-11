@@ -15,6 +15,10 @@ namespace Library_Management_System
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["Role"] == null || Session["Role"].ToString() != "Admin")
+            {
+                Response.Redirect("Login.aspx");
+            }
 
         }
 

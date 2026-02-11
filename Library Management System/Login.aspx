@@ -19,6 +19,14 @@
 
                 <h2 class="login-title">Library Login</h2>
                 <p class="login-subtitle">Welcome back 👋</p>
+                <asp:DropDownList ID="ddlRole" runat="server"
+    AutoPostBack="true"
+    OnSelectedIndexChanged="ddlRole_SelectedIndexChanged">
+    <asp:ListItem Text="Admin" Value="Admin"></asp:ListItem>
+    <asp:ListItem Text="Student" Value="Student"></asp:ListItem>
+</asp:DropDownList>
+
+
 
                 <div class="input-group">
                     <asp:TextBox ID="txtUsername" runat="server"
@@ -37,6 +45,12 @@
                     Text="Log In"
                     CssClass="login-btn"
                     OnClick="btnLogin_Click" />
+                <asp:Button ID="btnRegister" runat="server"
+                Text="Register"
+                CssClass="secondary-btn"
+                Visible="false"
+                OnClick="btnRegister_Click" />
+
 
                 <asp:Label ID="lblMessage" runat="server"
                     CssClass="login-error"></asp:Label>
