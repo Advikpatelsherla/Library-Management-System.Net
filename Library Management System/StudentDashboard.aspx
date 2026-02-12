@@ -12,6 +12,34 @@
             <h2 class="form-title">Student Dashboard</h2>
 
             <!-- SEARCH SECTION -->
+
+            <div class="profile-card">
+
+    <asp:Image ID="imgProfile"
+    runat="server"
+    Width="90px"
+    Height="90px"
+    Style="border-radius:50%; object-fit:cover; border:3px solid #0d6efd;" />
+
+
+
+    <div class="profile-info">
+        <h3><asp:Label ID="lblStudentName" runat="server" /></h3>
+
+        <p>
+            <strong>Email:</strong>
+            <asp:Label ID="lblEmail" runat="server" />
+        </p>
+
+        <p>
+            <strong>Mobile:</strong>
+            <asp:Label ID="lblMobile" runat="server" />
+        </p>
+    </div>
+
+</div>
+
+
             <div class="search-section">
 
                 <asp:TextBox ID="txtSearch" runat="server"

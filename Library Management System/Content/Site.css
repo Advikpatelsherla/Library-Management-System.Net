@@ -348,3 +348,44 @@ textarea {
         .grid-scroll::-webkit-scrollbar-thumb:hover {
             background: #6c757d;
         }
+
+
+/* ===== STUDENT PROFILE CARD ===== */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+
+.profile-info h3 {
+    margin: 0;
+    color: #0d6efd;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+
+/* ===== Student Profile Image ===== */
+
+/* ===== Student Profile Image FINAL FIX ===== */
+
+.profile-img {
+    width: 90px !important;
+    height: 90px !important;
+    max-width: 90px !important;
+    max-height: 90px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 3px solid #0d6efd;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+

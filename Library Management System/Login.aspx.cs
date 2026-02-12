@@ -72,26 +72,27 @@ namespace Library_Management_System
                 else if (role == "Student")
                 {
                     SqlCommand cmd = new SqlCommand(
-                        "SELECT StudentId FROM Students WHERE Email=@email AND Password=@p",
+                        "SELECT StudentId FROM Students WHERE Email=@e AND Password=@p",
                         con);
 
-                    cmd.Parameters.AddWithValue("@email", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("@e", txtUsername.Text);
                     cmd.Parameters.AddWithValue("@p", txtPassword.Text);
 
                     object result = cmd.ExecuteScalar();
 
                     if (result != null)
                     {
-                        Session["UserId"] = result.ToString();   // MUST exist
+                        Session["StudentID"] = result.ToString();
                         Session["Role"] = "Student";
+
                         Response.Redirect("StudentDashboard.aspx");
                     }
-
                     else
                     {
-                        lblMessage.Text = "Invalid Student Email or Password";
+                        lblMessage.Text = "Invalid Student Credentials";
                     }
                 }
+
             }
         }
     }

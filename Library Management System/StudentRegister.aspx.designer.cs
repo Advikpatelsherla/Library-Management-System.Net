@@ -60,6 +60,15 @@ namespace Library_Management_System
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
 
         /// <summary>
+        /// fuProfilePic control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuProfilePic;
+
+        /// <summary>
         /// btnRegister control.
         /// </summary>
         /// <remarks>

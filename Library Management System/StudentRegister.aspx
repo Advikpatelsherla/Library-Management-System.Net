@@ -41,6 +41,10 @@
                     TextMode="Password"
                     CssClass="form-input"></asp:TextBox>
             </div>
+            <div class="form-group">
+                <label>Profile Picture (Optional)</label>
+                <asp:FileUpload ID="fuProfilePic" runat="server" CssClass="form-input" />
+            </div>
 
 
             <div class="form-actions">
